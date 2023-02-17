@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 3</title>
+</head>
+
+<body>
+	<p>
+		Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.
+	</p>
+	<script>
+		const firstNumRandom = 1
+		const secondNumRandom = 5
+		let someNum = firstNumRandom + Math.floor(Math.random() * (secondNumRandom - firstNumRandom + 1))
+		let randomNum = parseInt(prompt(`Введіть рандомне число від 1 до 5`, ''))
+
+		if (someNum === randomNum)
+			alert(`<div>Вітаємо! Випадкове число вгадано з першої спроби! - ${someNum} </div>`)
+
+		else {
+			randomNum = parseInt(prompt(`З першої спроби число не вгадане, введіть число від 1 до 5`, ''))
+			if (someNum === randomNum)
+				document.write(`<div>Вітаємо! Випадкове число вгадано з другої спроби!</div>`)
+			else
+				document.write(`<div>Вибачте із 2 спроб число не вгадано!</div>`)
+		}
+
+	</script>
+</body>
+
+</html>
